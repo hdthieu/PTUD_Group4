@@ -153,8 +153,8 @@ public class HomeMain1 extends javax.swing.JFrame {
         MenuItem menuProduct = new MenuItem(iconHoaDon, "Hóa Đơn", null);
         
 //        MenuItem menuCongTrinh = new MenuItem(null, "Công trình", null, menuCT1, menuCT2);
-//        MenuItem menuAdmin = new MenuItem(null, "Admin", null, menuadmin1);
-        addMenu( menuHome, menuSP,menuProduct, menuNhanVien, menuNCC, menuTKe, menuDangXuat);
+        MenuItem menuAdmin = new MenuItem(null, "Admin", null);
+        addMenu( menuHome, menuSP,menuProduct, menuNhanVien, menuNCC, menuTKe, menuAdmin, menuDangXuat);
 
     }
 
