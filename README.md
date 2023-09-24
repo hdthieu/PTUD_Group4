@@ -13,4 +13,7 @@
     + B3: git commit -m "Thông điệp commit của bạn"
     + B4: git push origin master
   * Mở project trong netbeans (file project vừa clone về)
-  
+
+  * khi sử dụng ở branch khác gõ code nhớ compare để gửi request cho merge code vào main
+  * khi mở máy lên làm code nhớ gõ lệnh "git merge main" về để lấy main mới nhất(tránh việc bị thiếu xót)
+    
