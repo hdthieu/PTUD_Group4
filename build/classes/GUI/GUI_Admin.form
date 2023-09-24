@@ -206,9 +206,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Java_Web\BanHangThoiTrang\src\img\icon_add.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Add"/>
               </Properties>
             </Component>
@@ -217,9 +214,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Java_Web\BanHangThoiTrang\src\img\icon_remove.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Remove"/>
               </Properties>
             </Component>
@@ -227,9 +221,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Java_Web\BanHangThoiTrang\src\img\icon_change.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Change"/>
               </Properties>

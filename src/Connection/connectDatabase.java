@@ -18,9 +18,9 @@ public class connectDatabase {
         Connection conn = null;
         try {
              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String url = "jdbc:sqlserver://localhost:1433;databaseName=DANGNHAP";
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=GROUP4";
             String user = "sa";
-            String pass = "hoductrihieu13";
+            String pass = "123";
             conn = DriverManager.getConnection(url, user, pass);
             if(conn != null)
                 System.out.println("Ket noi thanh cong");

@@ -4,10 +4,10 @@
  */
 package Controller;
 
-import GUI.Admin;
-import GUI.DonHangGUI;
-import GUI.Home;
-import GUI.ThongKe;
+import GUI.GUI_Admin;
+import GUI.GUI_DonHang;
+import GUI.GUI_Home;
+import GUI.GUI_ThongKe;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.List;
@@ -35,7 +35,7 @@ public class chuyenMHController {
 //        JlbItem.setBackground(new Color(96, 100, 191 ));
         root.removeAll();
         root.setLayout(new BorderLayout());
-        root.add(new Home());
+        root.add(new GUI_Home());
         root.validate();
         root.repaint();
     }
@@ -63,19 +63,19 @@ public class chuyenMHController {
         public void mouseClicked(MouseEvent e) {
             switch (kind) {
                 case "ThongKe":
-                    node = new ThongKe();
+                    node = new GUI_ThongKe();
                     break;
                 case "DonHang":
-                    node = new DonHangGUI();
+                    node = new GUI_DonHang();
                     break;
                 case "Admin":
-                    node = new Admin();
+                    node = new GUI_Admin();
                     break;
                 case "Home":
-                    node = new Home();
+                    node = new GUI_Home();
                     break;
                 default:
-                    node = new Home();
+                    node = new GUI_Home();
                     break;
             }
             root.removeAll();

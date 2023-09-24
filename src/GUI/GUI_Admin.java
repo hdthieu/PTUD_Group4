@@ -8,12 +8,12 @@ package GUI;
  *
  * @author TriHieu
  */
-public class Admin extends javax.swing.JPanel {
+public class GUI_Admin extends javax.swing.JPanel {
 
     /**
      * Creates new form Admin
      */
-    public Admin() {
+    public GUI_Admin() {
         initComponents();
     }
 
@@ -75,15 +75,12 @@ public class Admin extends javax.swing.JPanel {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Thu Ngân", "Admin", "Quản Lý", " " }));
 
         btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnAdd.setIcon(new javax.swing.ImageIcon("D:\\Java_Web\\BanHangThoiTrang\\src\\img\\icon_add.png")); // NOI18N
         btnAdd.setText("Add");
 
         btnRemove.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnRemove.setIcon(new javax.swing.ImageIcon("D:\\Java_Web\\BanHangThoiTrang\\src\\img\\icon_remove.png")); // NOI18N
         btnRemove.setText("Remove");
 
         btnChange.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnChange.setIcon(new javax.swing.ImageIcon("D:\\Java_Web\\BanHangThoiTrang\\src\\img\\icon_change.png")); // NOI18N
         btnChange.setText("Change");
 
         jCheckBox1.setText("Chưa có tài khoản");

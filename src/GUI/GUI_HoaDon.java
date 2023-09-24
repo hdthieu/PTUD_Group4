@@ -8,12 +8,12 @@ package GUI;
  *
  * @author TriHieu
  */
-public class HoaDonGUI extends javax.swing.JPanel {
+public class GUI_HoaDon extends javax.swing.JPanel {
 
     /**
      * Creates new form ThuKhoGui
      */
-    public HoaDonGUI() {
+    public GUI_HoaDon() {
         initComponents();
     }
 

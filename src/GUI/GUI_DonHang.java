@@ -8,12 +8,12 @@ package GUI;
  *
  * @author TriHieu
  */
-public class KhachHangGUI extends javax.swing.JPanel {
+public class GUI_DonHang extends javax.swing.JPanel {
 
     /**
-     * Creates new form KhachHangGUI
+     * Creates new form DonHangGUI
      */
-    public KhachHangGUI() {
+    public GUI_DonHang() {
         initComponents();
     }
 
@@ -29,23 +29,23 @@ public class KhachHangGUI extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel1.setText("KhachHang");
+        jLabel1.setText("DonHang");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(310, 310, 310)
+                .addGap(258, 258, 258)
                 .addComponent(jLabel1)
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addContainerGap(502, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(111, 111, 111)
+                .addGap(196, 196, 196)
                 .addComponent(jLabel1)
-                .addContainerGap(382, Short.MAX_VALUE))
+                .addContainerGap(303, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

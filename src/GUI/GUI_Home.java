@@ -11,12 +11,12 @@ import javax.swing.ImageIcon;
  *
  * @author TriHieu
  */
-public class Home extends javax.swing.JPanel {
+public class GUI_Home extends javax.swing.JPanel {
 
     /**
      * Creates new form Admin
      */
-    public Home() {
+    public GUI_Home() {
         initComponents();
     }
  public void scaleImage() {

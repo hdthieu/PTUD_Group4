@@ -6,7 +6,7 @@ package GUI;
 
 
 import Connection.connectDatabase;
-import GUI.HomeMain1;
+import GUI.GUI_HomeMain;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -130,7 +130,7 @@ public class Login extends javax.swing.JFrame {
         try {
             Connection conn = cn.getConnection();
             ResultSet rs;
-            String sql = "Select * from ACCOUNT where Username = ? and Pass = ?";
+            String sql = "Select * from TaiKhoan where tenTaiKhoan = ? and matKhau = ?";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1 , txtUserName.getText());            
             ps.setString(2 , txtPass.getText());
@@ -139,8 +139,7 @@ public class Login extends javax.swing.JFrame {
             if(txtUserName.getText().equals("") ||  txtPass.getText().equals(""))
                 JOptionPane.showMessageDialog(this,"Chưa nhập user và pass" );
             else if(rs.next()){
-                HomeMain1 h = new HomeMain1();
-//                khungChinh h = new khungChinh();
+                GUI_HomeMain h = new GUI_HomeMain();
                 h.setVisible(true);
                 this.dispose();
                 JOptionPane.showMessageDialog(this,"Đăng Nhập thành công" );

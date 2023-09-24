@@ -1,11 +1,11 @@
 
 package GUI;
 
-import GUI.DonHangGUI;
-import GUI.Home;
-import GUI.KhachHangGUI;
+import GUI.GUI_DonHang;
+import GUI.GUI_Home;
+import GUI.GUI_KhachHang;
 import GUI.MenuItem;
-import GUI.ThongKe;
+import GUI.GUI_ThongKe;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -38,7 +38,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.JPanel;
-public class HomeMain1 extends javax.swing.JFrame {
+public class GUI_HomeMain extends javax.swing.JFrame {
 
     
 
@@ -67,7 +67,7 @@ public class HomeMain1 extends javax.swing.JFrame {
 //        Time.start();
 //    }
 
-    public HomeMain1() {
+    public GUI_HomeMain() {
     initComponents();
     setLocationRelativeTo(null);
     this.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -101,7 +101,7 @@ public class HomeMain1 extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pnlBody.removeAll();
-                pnlBody.add(new KhachHangGUI());
+                pnlBody.add(new GUI_KhachHang());
                 pnlBody.repaint();
                 pnlBody.revalidate();
             }
@@ -110,7 +110,7 @@ public class HomeMain1 extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pnlBody.removeAll();
-                pnlBody.add(new HoaDonGUI());
+                pnlBody.add(new GUI_HoaDon());
                 pnlBody.repaint();
                 pnlBody.revalidate();
             }
@@ -119,7 +119,7 @@ public class HomeMain1 extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pnlBody.removeAll();
-                pnlBody.add(new DonHangGUI());
+                pnlBody.add(new GUI_DonHang());
                 pnlBody.repaint();
                 pnlBody.revalidate();
             }
@@ -132,7 +132,7 @@ public class HomeMain1 extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pnlBody.removeAll();
-                pnlBody.add(new Home());
+                pnlBody.add(new GUI_Home());
                 pnlBody.repaint();
                 pnlBody.revalidate();
             }
@@ -142,7 +142,7 @@ public class HomeMain1 extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pnlBody.removeAll();
-                pnlBody.add(new ThongKe());
+                pnlBody.add(new GUI_ThongKe());
                 pnlBody.repaint();
                 pnlBody.revalidate();
             }

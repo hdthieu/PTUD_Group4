@@ -8,12 +8,12 @@ package GUI;
  *
  * @author TriHieu
  */
-public class PhanQuyenGUI extends javax.swing.JPanel {
+public class GUI_KhachHang extends javax.swing.JPanel {
 
     /**
-     * Creates new form PhanQuyenJPanel
+     * Creates new form KhachHangGUI
      */
-    public PhanQuyenGUI() {
+    public GUI_KhachHang() {
         initComponents();
     }
 
@@ -29,23 +29,23 @@ public class PhanQuyenGUI extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel1.setText("PhanQuyen");
+        jLabel1.setText("KhachHang");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(443, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(310, 310, 310)
                 .addComponent(jLabel1)
-                .addGap(359, 359, 359))
+                .addContainerGap(442, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(162, 162, 162)
+                .addGap(111, 111, 111)
                 .addComponent(jLabel1)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addContainerGap(382, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

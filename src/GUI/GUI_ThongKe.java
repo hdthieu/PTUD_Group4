@@ -8,12 +8,12 @@ package GUI;
  *
  * @author TriHieu
  */
-public class ThongKe extends javax.swing.JPanel {
+public class GUI_ThongKe extends javax.swing.JPanel {
 
     /**
      * Creates new form ThongKe
      */
-    public ThongKe() {
+    public GUI_ThongKe() {
         initComponents();
     }
 
