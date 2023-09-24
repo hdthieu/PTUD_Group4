@@ -1,6 +1,7 @@
 # PTUD_Group4
 
-- Tải netbeans 19
+- Tải netbeans
+- Dùng JDK 19
 - jcalender có trên github (dùng để xác định time)
 
 * lệnh git
