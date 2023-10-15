@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Admin
+ * @author dinhh
  */
 public class TaiKhoan_DAO {
     NhanVien_DAO nvDao= new NhanVien_DAO();
@@ -35,24 +35,24 @@ public class TaiKhoan_DAO {
             ResultSet rs = st.executeQuery(sql);
             TaiKhoan listtk;
             while (rs.next()) {
-                listtk = new TaiKhoan(rs.getInt("MaNhanVien"), rs.getString("TenTaiKhoan"), rs.getString("MatKhau"), rs.getString("QuyenTruyCap"), rs.getString("TenNhanVien"));
+                listtk = new TaiKhoan(rs.getString("tenTaiKhoan"), rs.getString("matKhau"), rs.getString("quyenTruyCap"), rs.getString("maNhanVien"));
                 Listtk.add(listtk);
             }
         } catch (Exception e) {
         }
         return Listtk;
     }
-        public ArrayList<TaiKhoan_DTO> taikhoanDN(String user) {
-        ArrayList<TaiKhoan_DTO> Listtk = new ArrayList<>();
+        public ArrayList<TaiKhoan> taikhoanDN(String user) {
+        ArrayList<TaiKhoan> Listtk = new ArrayList<>();
         try {
             conn = cn.getConnection();
             String sql = "select *from TaiKhoan where TenTaiKhoan=?";
             PreparedStatement st = conn.prepareStatement(sql);
             st.setString(1, user);
             ResultSet rs = st.executeQuery(sql);
-            TaiKhoan_DTO listtk;
+            TaiKhoan listtk;
             while (rs.next()) {
-                listtk = new TaiKhoan_DTO(rs.getInt("MaCongNhan"), rs.getString("TenTaiKhoan"), rs.getString("MatKhau"), rs.getString("QuyenTruyCap"), rs.getString("TenNhanVien"));
+                listtk = new TaiKhoan(rs.getString("tenTaiKhoan"), rs.getString("matKhau"), rs.getString("quyenTruyCap"), rs.getString("maNhanVien"));
                 Listtk.add(listtk);
             }
         } catch (Exception e) {
@@ -60,7 +60,7 @@ public class TaiKhoan_DAO {
         return Listtk;
     }
 
-    public void themnv(String maNV, String tenTK, String matKhau, String quyenTC, String tenNV, JTable table) {
+    public void themnv(String maNV, String tenTK, String matKhau, String quyenTC, String tenNV, JTable table) throws ClassNotFoundException {
         conn = cn.getConnection();
 
         String sql = "insert into TaiKhoan(MaCongNhan,TenTaiKhoan,MatKhau,QuyenTruyCap,TenNhanVien) values(?,?,?,?,?)";
@@ -85,31 +85,29 @@ public class TaiKhoan_DAO {
 
     }
     public void show_DSNV(JTable table) {
-        ArrayList<CongNhan> list = cnDao.docTuBang();
+        ArrayList<NhanVien> list = nvDao.docTuBang();
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         Object[] row = new Object[3];
         for (int i = 0; i < list.size(); i++) {
-            row[0] = list.get(i).getTenCN();
-            row[1] = list.get(i).getMaCN();
-            row[2] = list.get(i).getChucVu();
+            row[0] = list.get(i).getTenNhanVien();
+    
             
             model.addRow(row);
         }
     }
      public void show_TK(JTable table) {
-        ArrayList<TaiKhoan_DTO> list = Listtk();
+        ArrayList<TaiKhoan> list = Listtk();
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         Object[] row = new Object[5];
         for (int i = 0; i < list.size(); i++) {
             row[0] = list.get(i).getTenTaiKhoan();
             row[1] = list.get(i).getMatKhau();
-            row[2] = list.get(i).getTenNV();
-            row[3] = list.get(i).getMaCN();
-            row[4] = list.get(i).getQuyenTC();
+             row[2] = list.get(i).getQuyenTruyCap();
+            row[3] = list.get(i).getMaNhanVien();
             model.addRow(row);
         }
     }
-    public void xoaTK(String tentk, JTable table){
+    public void xoaTK(String tentk, JTable table) throws ClassNotFoundException{
           conn = cn.getConnection();
 
         String sql = "DELETE FROM TaiKhoan WHERE TenTaiKhoan=?";
@@ -117,7 +115,7 @@ public class TaiKhoan_DAO {
         try {
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.setString(1, tentk);
-            MyDialog dlg = new MyDialog("Bạn có muốn xóa không", MyDialog.WARNING_DIALOG);
+            MyDialog dlg = new MyDialog("Bạn có muốn xóa không", MyDialog.OK_OPTION);
             if (dlg.getAction() == MyDialog.OK_OPTION) {
 
                 pst.executeUpdate();
@@ -131,11 +129,8 @@ public class TaiKhoan_DAO {
            
         }
     }
-    public void suaTK(String maNV,String tenTaiKhoan,String matKhau,String tenNV,String quyen,JTable table){
-          conn = cn.getConnection();
-
-        
-
+    public void suaTK(String maNV,String tenTaiKhoan,String matKhau,String tenNV,String quyen,JTable table) throws ClassNotFoundException{
+        conn = cn.getConnection();
         String sql = "UPDATE TaiKhoan SET MaCongNhan=?,TenTaiKhoan=?,MatKhau=?,QuyenTruyCap=?,TenNhanVien=? where TenTaiKhoan =? ";
         try {
             PreparedStatement pst = conn.prepareStatement(sql);
@@ -156,6 +151,23 @@ public class TaiKhoan_DAO {
 
         } catch (SQLException ex) {
          
+        }
+    }
+
+    private static class MyDialog {
+
+        private static boolean OK_OPTION;
+        private static boolean SUCCESS_DIALOG;
+
+        public MyDialog() {
+        }
+
+        private MyDialog(String bạn_có_muốn_xóa_không, boolean OK_OPTION) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        private boolean getAction() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
     }
     
