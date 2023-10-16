@@ -15,25 +15,8 @@ CREATE TABLE NhanVien(
     soDienThoai int NOT NULL,
 	gioiTinh nvarchar(10) CHECK (gioiTinh IN ('Nam', 'Nữ')),
     ngaySinh Date,
-    hinhAnh VARCHAR(MAX)
-);
-
-CREATE TABLE NhanVienThongKe (
-    maNhanVien varchar(10) PRIMARY KEY,
-	chucVu nvarchar(20) NOT NULL,
-    FOREIGN KEY (maNhanVien) REFERENCES NhanVien(maNhanVien)
-);
-
-CREATE TABLE NhanVienQuanLy (
-    maNhanVien varchar(10) PRIMARY KEY,
-	chucVu nvarchar(20) NOT NULL,
-    FOREIGN KEY (maNhanVien) REFERENCES NhanVien(maNhanVien)
-);
-
-CREATE TABLE NhanVienBanHang (
-    maNhanVien varchar(10) PRIMARY KEY,
-	chucVu nvarchar(20) NOT NULL,
-    FOREIGN KEY (maNhanVien) REFERENCES NhanVien(maNhanVien)
+    hinhAnh VARCHAR(MAX),
+	chucVu nvarchar(20) NOT NULL
 );
 
 CREATE TABLE TaiKhoan(
@@ -43,73 +26,76 @@ CREATE TABLE TaiKhoan(
 	maNhanVien varchar(10) ,
 	FOREIGN KEY (maNhanVien) REFERENCES NhanVien(maNhanVien)
 );
-CREATE TABLE LoaiSP(
-	maloaiSP varchar(10) PRIMARY KEY,
-	tenLoaiSP nvarchar(15) NOT NULL
-);
+
 CREATE TABLE NhaCungCap(
 	maNhaCungCap varchar(15) PRIMARY KEY,
 	tenNhaCungCap nvarchar(25) NOT NULL,
 	diaChi nvarchar(30) NOT NULL,
 	soDienThoai int NOT NULL,
 );
-CREATE TABLE SanPham(
-	maSP varchar(15) PRIMARY KEY,
-	tenSP nvarchar(15) NOT NULL,
-	giaSP float NOT NULL,
-	donViTinh varchar(5) NOT NULL,
-	soLuong int NOT NULL,
-	maloaiSP varchar(10),
-	maNhaCungCap varchar(15),
-	hinhAnh VARCHAR(MAX),
-	FOREIGN KEY (maloaiSP) REFERENCES LoaiSP(maloaiSP),
-	FOREIGN KEY (maNhaCungCap) REFERENCES NhaCungCap(maNhaCungCap)
+
+CREATE TABLE SanPham (
+    maSP VARCHAR(15) PRIMARY KEY,
+    tenSP NVARCHAR(15) NOT NULL,
+    giaBan float,
+	giaNhap float,
+    soLuong INT NOT NULL,
+    maloaiSP VARCHAR (10),
+    maNhaCungCap VARCHAR(15),
+    hinhAnh VARCHAR(MAX),
+	FOREIGN KEY (maNhaCungCap) REFERENCES NhaCungCap(maNhaCungCap),
 );
+Alter table SanPham 
+ADD Constraint checkGia Check (giaBan > giaNhap)
 
 CREATE TABLE ChiTietHoaDon(
 	maHoaDon varchar(15) PRIMARY KEY,
 	maSP varchar(15),
 	soLuong int NOT NULL,
-	donGia float NOT NULL
+	donGiaBan float NOT NULL
 	FOREIGN KEY (maSP) REFERENCES SanPham(maSP)
 );
-
 
 CREATE TABLE HoaDon(
 	maHoaDon varchar(15) PRIMARY KEY,
 	ngayTao Date,
-	thanhTien float NOT NULL,
 	maKH varchar(15),
-	maNhanVienBanHang varchar(10),
+	maNhanVien varchar(10),
 	FOREIGN KEY (maKH) REFERENCES KhachHang(maKH),
 	FOREIGN KEY (maHoaDon) REFERENCES ChiTietHoaDon(maHoaDon),
-	FOREIGN KEY (maNhanVienBanHang) REFERENCES NhanVienBanHang(maNhanVien)
+	FOREIGN KEY (maNhanVien) REFERENCES NhanVien(maNhanVien)
 );
 
-CREATE TABLE DonDatHang(
-	maDonDatHang varchar(15) NOT NULL PRIMARY KEY,
-	ngayTaoDonDatHang Date NOT NULL,
-	tongTien float NOT NULL,
-	maKH varchar(15),
-	tenKH nvarChar(25),
-	soDienThoai int NOT NULL,
-	diaChi nvarchar(30) NOT NULL,
-	maSP varchar(15),
-	tenSP nvarchar(15),
-	FOREIGN KEY (maKH) REFERENCES KhachHang(maKH),
-	FOREIGN KEY (maSP) REFERENCES SanPham(maSP)
+CREATE TABLE PhieuDatHang (
+    maPhieuDatHang varchar(15) NOT NULL PRIMARY KEY,
+    ngayTaoPhieuDatHang Date NOT NULL,
+    maKH varchar(15),
+    maNhanVien varchar(10),
+    FOREIGN KEY (maKH) REFERENCES KhachHang(maKH),
+    FOREIGN KEY (maNhanVien) REFERENCES NhanVien(maNhanVien)
 );
 
-CREATE TABLE ChiTietDonDatHang(
-	maDonHang varchar(15) PRIMARY KEY,
-	donGia float NOT NULL,
-	soLuong int NOT NULL,
-	maSP varchar(15),
-	tenSP varchar(15),
-	FOREIGN KEY (maDonHang) REFERENCES DonDatHang(maDonDatHang)
+CREATE TABLE ChiTietPhieuDatHang (
+    maPhieuDatHang varchar(15) PRIMARY KEY,
+    donGiaBan float NOT NULL,
+    soLuong int NOT NULL,
+    maSP varchar(15),
+    FOREIGN KEY (maPhieuDatHang) REFERENCES PhieuDatHang(maPhieuDatHang),
+    FOREIGN KEY (maSP) REFERENCES SanPham(maSP)
 );
 
 
+CREATE TABLE LoaiSP (
+    maLoai varchar(15) PRIMARY KEY ,
+    tenLoai float NOT NULL,
+    maSP varchar(15),
+    FOREIGN KEY (maSP) REFERENCES SanPham(maSP)
+);
 
 
 
+INSERT INTO NhanVien (maNhanVien, tenNhanVien, diaChi, soDienThoai, gioiTinh, ngaySinh, hinhAnh, chucVu)
+VALUES ('QL001', 'Nguyễn Văn', 'Quận Gò Vấp, HCM', 0987563874, 'Nam', '1990-01-15', 'link_hinh_anh1', 'Quản Lý');
+
+INSERT INTO TaiKhoan (tenTaiKhoan, matKhau, quyenTruyCap, maNhanVien)
+VALUES ('nguyenvan', '123', 'Quản Lý', 'QL001');
