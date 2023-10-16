@@ -15,9 +15,11 @@ import javax.swing.JOptionPane;
  */
 public class connectDatabase {
 
+
     public static Object getInstance() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
    public Connection getConnection() throws ClassNotFoundException{
         Connection conn = null;
         try {
@@ -34,5 +36,4 @@ public class connectDatabase {
         }
         return conn;
     }
-   
 }

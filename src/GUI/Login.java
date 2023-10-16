@@ -132,7 +132,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        connectDatabase cn = new connectDatabase();
+        ConnectSQL cn = new connectDatabase();
         try {
             Connection conn = cn.getConnection();
             ResultSet rs;
