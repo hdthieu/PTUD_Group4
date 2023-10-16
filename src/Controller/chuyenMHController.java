@@ -7,7 +7,7 @@ package Controller;
 import GUI.GUI_Admin;
 import GUI.GUI_DonHang;
 import GUI.GUI_Home;
-import GUI.GUI_ThongKe;
+import GUI.GUI_PhieuThongKe;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.List;
@@ -63,7 +63,7 @@ public class chuyenMHController {
         public void mouseClicked(MouseEvent e) {
             switch (kind) {
                 case "ThongKe":
-                    node = new GUI_ThongKe();
+                    node = new GUI_PhieuThongKe();
                     break;
                 case "DonHang":
                     node = new GUI_DonHang();

@@ -3,15 +3,36 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_Home.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_ThongKeSP.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_LapHoaDon.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_PhanQuyen.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_QuanLyHD.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_DonDatHang.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_ThongKeHoaDon.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_DonHang.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_NhanVien.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_Admin.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/Login.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_HoaDon.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/Controller/chuyenMHController.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/DAO/TaiKhoan_DAO.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_PhieuThongKe.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_TimKiemHD.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/img/icon_home.png</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_TaiKhoan.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_TimKiemKH.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_HomeMain.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/Connection/connectDatabase.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/MenuItem.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_ThongKeKH.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_NhaCungCap.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/Menu.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/img/icon_add.png</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_ThongKe.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/menu/menuPrimary.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_QuanLySP.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_QuanLyKhachHang.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/Entity/TaiKhoan.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_HoaDon.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/banhangthoitrang/BanHangThoiTrang.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_TimKiemSP.java</file>
         </group>
     </open-files>
 </project-private>
