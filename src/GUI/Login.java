@@ -5,7 +5,8 @@
 package GUI;
 
 
-import Connection.connectDatabase;
+import Connection.ConnectSQL;
+import Connection.ConnectSQL;
 import GUI.GUI_HomeMain;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -132,7 +133,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        ConnectSQL cn = new connectDatabase();
+        ConnectSQL cn = new ConnectSQL();
         try {
             Connection conn = cn.getConnection();
             ResultSet rs;
@@ -156,8 +157,6 @@ public class Login extends javax.swing.JFrame {
             conn.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnLoginActionPerformed
      
