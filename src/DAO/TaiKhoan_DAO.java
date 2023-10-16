@@ -4,7 +4,6 @@
  */
 package DAO;
 import Connection.ConnectSQL;
-import Connection.connectDatabase;
 import Entity.NhanVien;
 import Entity.TaiKhoan;
 import java.sql.*;

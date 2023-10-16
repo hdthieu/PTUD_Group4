@@ -93,9 +93,6 @@ CREATE TABLE LoaiSP (
 );
 
 
-
-
-
 -- Thêm dữ liệu vào bảng KhachHang
 INSERT INTO KhachHang (maKH, tenKH, diaChi, soDienThoai, gioiTinh)
 VALUES 
