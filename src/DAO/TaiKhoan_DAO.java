@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package DAO;
-import Connection.connectDatabase;
+import Connection.ConnectSQL;
 import Entity.NhanVien;
 import Entity.TaiKhoan;
 import java.sql.*;
@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class TaiKhoan_DAO {
     NhanVien_DAO nvDao= new NhanVien_DAO();
-    connectDatabase cn = new connectDatabase();
+    ConnectSQL cn = new ConnectSQL();
     Connection conn;
     ResultSet rs;
 
