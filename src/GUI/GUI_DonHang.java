@@ -76,6 +76,7 @@ public class GUI_DonHang extends javax.swing.JPanel {
         jLabel14 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
+<<<<<<< HEAD
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
@@ -362,6 +363,23 @@ public class GUI_DonHang extends javax.swing.JPanel {
                                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(19, 19, 19)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(258, 258, 258)
+                .addComponent(jLabel1)
+                .addContainerGap(553, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(196, 196, 196)
+                .addComponent(jLabel1)
+                .addContainerGap(319, Short.MAX_VALUE))
+>>>>>>> 5ff51295912a7f09cae7cbdd1974d8690069211b
         );
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N

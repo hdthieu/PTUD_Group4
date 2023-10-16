@@ -13,6 +13,9 @@ import java.util.Date;
 public class NhanVien {
     private String maNhanVien;
     private String tenNhanVien;
+    private String chucVu;
+
+   
     private boolean gioiTinh;
     private int SDT;
     private Date ngaySinh;
@@ -43,17 +46,27 @@ public class NhanVien {
     public String getTenNhanVien() {
         return tenNhanVien;
     }
-
+    public String getChucVu() {
+        return chucVu;
+    }
+    public void setChucVu(String chucVu) {
+        this.chucVu = chucVu;
+    }
     public void setTenNhanVien(String tenNhanVien) {
         this.tenNhanVien = tenNhanVien;
     }
-
     public boolean isGioiTinh() {
         return gioiTinh;
     }
+    
 
     public void setGioiTinh(boolean gioiTinh) {
         this.gioiTinh = gioiTinh;
+    }
+
+    // Create a getGioiTinh method based on the existing isGioiTinh method
+    public boolean getGioiTinh() {
+        return isGioiTinh();
     }
 
     public int getSDT() {
@@ -67,7 +80,6 @@ public class NhanVien {
     public Date getNgaySinh() {
         return ngaySinh;
     }
-
     public void setNgaySinh(Date ngaySinh) {
         this.ngaySinh = ngaySinh;
     }
