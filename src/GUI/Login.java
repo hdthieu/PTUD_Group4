@@ -6,7 +6,7 @@ package GUI;
 
 
 import Connection.connectDatabase;
-import GUI.HomeMain1;
+import GUI.GUI_HomeMain;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -46,7 +46,7 @@ public class Login extends javax.swing.JFrame {
        
     }
      public void scaleImage() {
-         ImageIcon icon =  new ImageIcon("D:\\Group4_PTUD\\BanHangThoiTrang\\src\\img\\logo.jpg");
+        ImageIcon icon =  new ImageIcon("D:\\Group4_PTUD\\BanHangThoiTrang\\src\\img\\logo.jpg");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(jLabel5.getWidth(), jLabel5.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaleIcon  = new ImageIcon(imgScale);
@@ -58,6 +58,8 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -67,6 +69,10 @@ public class Login extends javax.swing.JFrame {
         txtUserName = new javax.swing.JTextField();
         txtPass = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+
+        jRadioButton1.setText("jRadioButton1");
+
+        jRadioButton2.setText("jRadioButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Đăng Nhập");
@@ -87,7 +93,7 @@ public class Login extends javax.swing.JFrame {
                 btnLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 100, 40));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 100, 40));
 
         jLabel4.setBackground(new Color(80, 53, 26)
         );
@@ -112,25 +118,25 @@ public class Login extends javax.swing.JFrame {
         );
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Login ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
+        jLabel1.setText("Đăng nhập tài khoản của bạn");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, -1, -1));
         getContentPane().add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 180, 30));
         getContentPane().add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 180, 30));
 
         jLabel5.setBackground(new java.awt.Color(153, 51, 255));
         jLabel5.setForeground(new java.awt.Color(153, 51, 255));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg_login.jpg"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 330));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        connectDatabase cn = new connectDatabase();
+        ConnectSQL cn = new connectDatabase();
         try {
             Connection conn = cn.getConnection();
             ResultSet rs;
-            String sql = "Select * from ACCOUNT where Username = ? and Pass = ?";
+            String sql = "Select * from TaiKhoan where tenTaiKhoan = ? and matKhau = ?";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1 , txtUserName.getText());            
             ps.setString(2 , txtPass.getText());
@@ -139,8 +145,7 @@ public class Login extends javax.swing.JFrame {
             if(txtUserName.getText().equals("") ||  txtPass.getText().equals(""))
                 JOptionPane.showMessageDialog(this,"Chưa nhập user và pass" );
             else if(rs.next()){
-                HomeMain1 h = new HomeMain1();
-//                khungChinh h = new khungChinh();
+                GUI_HomeMain h = new GUI_HomeMain();
                 h.setVisible(true);
                 this.dispose();
                 JOptionPane.showMessageDialog(this,"Đăng Nhập thành công" );
@@ -186,6 +191,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField txtPass;
     private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
