@@ -1,11 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package GUI;
-
-
-import Connection.connectDatabase;
 import GUI.GUI_HomeMain;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -28,8 +21,9 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.UnsupportedLookAndFeelException;
+//import Connection.ConnectSQL;
 import Connection.ConnectSQL;
-//import Connection.connectDatabase;
+
 
 /**
  *
@@ -133,33 +127,28 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        connectDatabase cn = new connectDatabase();
-        try {
-            Connection conn = cn.getConnection();
-            ResultSet rs;
-            String sql = "Select * from TaiKhoan where tenTaiKhoan = ? and matKhau = ?";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1 , txtUserName.getText());            
-            ps.setString(2 , txtPass.getText());
-            ps.execute();
-            rs = ps.executeQuery();
-            if(txtUserName.getText().equals("") ||  txtPass.getText().equals(""))
-                JOptionPane.showMessageDialog(this,"Chưa nhập user và pass" );
-            else if(rs.next()){
-                GUI_HomeMain h = new GUI_HomeMain();
-                h.setVisible(true);
-                this.dispose();
-                JOptionPane.showMessageDialog(this,"Đăng Nhập thành công" );
-            }
-               
-            else
-                JOptionPane.showMessageDialog(this,"Đăng Nhập thất bại" );
-            conn.close();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        ConnectSQL cn = ConnectSQL.getInstance(); // Sử dụng instance đã có
+    try {
+        Connection conn = cn.getConnection();
+        ResultSet rs;
+        String sql = "Select * from TaiKhoan where tenTaiKhoan = ? and matKhau = ?";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, txtUserName.getText());
+        ps.setString(2, txtPass.getText());
+        rs = ps.executeQuery();
+        if (txtUserName.getText().equals("") || txtPass.getText().equals(""))
+            JOptionPane.showMessageDialog(this, "Chưa nhập user và pass");
+        else if (rs.next()) {
+            GUI_HomeMain h = new GUI_HomeMain();
+            h.setVisible(true);
+            this.dispose();
+            JOptionPane.showMessageDialog(this, "Đăng Nhập thành công");
+        } else
+            JOptionPane.showMessageDialog(this, "Đăng Nhập thất bại");
+        cn.disconnect(); // Đóng kết nối
+    } catch (SQLException ex) {
+        ex.printStackTrace();
+    }
     }//GEN-LAST:event_btnLoginActionPerformed
      
     /**

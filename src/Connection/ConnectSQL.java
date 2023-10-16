@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Connection;
 
 import java.sql.Connection;
@@ -20,7 +17,7 @@ public class ConnectSQL {
         return instance;
     }
     public void connect(){
-        String url = "jdbc:sqlserver://localhost:1433; databasename=qlCongNhan";
+        String url = "jdbc:sqlserver://localhost:1433; databasename=Group4";
         String user = "sa";
         String password = "123";
         try {
