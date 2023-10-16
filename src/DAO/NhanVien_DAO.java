@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import Connection.ConnectSQL;
-import static Connection.ConnectSQL.con;
+
 import Entity.NhanVien;
 import java.util.Date;
 public class NhanVien_DAO {
@@ -62,7 +62,7 @@ public class NhanVien_DAO {
     }
 
     public boolean update(NhanVien p) {
-        con = ConnectSQL.getInstance().getConnection();
+        Connection con = ConnectSQL.getInstance().getConnection();
         PreparedStatement stmt = null;
         int n = 0;
         try {

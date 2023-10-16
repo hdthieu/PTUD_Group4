@@ -6,7 +6,6 @@ package GUI;
 
 
 import Connection.ConnectSQL;
-import Connection.ConnectSQL;
 import GUI.GUI_HomeMain;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -43,7 +42,7 @@ public class Login extends javax.swing.JFrame {
      
     public Login() {
         initComponents();
-//        scaleImage();
+        
        
     }
      public void scaleImage() {
@@ -133,7 +132,11 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+
         ConnectSQL cn = new ConnectSQL();
+
+        
+
         try {
             Connection conn = cn.getConnection();
             ResultSet rs;

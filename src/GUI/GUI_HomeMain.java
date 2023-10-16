@@ -1,11 +1,12 @@
 
 package GUI;
 
-import GUI.GUI_DonHang;
-import GUI.GUI_Home;
-import GUI.GUI_KhachHang;
-import GUI.MenuItem;
-import GUI.GUI_ThongKe;
+//import GUI.GUI_DonHang;
+import menu.Menu;
+import GUI.GUI_PhieuThongKe;
+import GUI.GUI_QuanLySP;
+import GUI.GUI_ThongKeSP;
+import GUI.GUI_TimKiemSP;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -86,127 +87,206 @@ public class GUI_HomeMain extends javax.swing.JFrame {
    
     private void execute() {
         //icon
-       
+        ImageIcon iconAccount = new ImageIcon(getClass().getResource("/img/icon_account.png"));
         ImageIcon iconSubMenu = new ImageIcon(getClass().getResource("/img/icon_item.png"));
-        ImageIcon iconHome = new ImageIcon(getClass().getResource("/img/icon_home.png"));
         ImageIcon iconThongKe = new ImageIcon(getClass().getResource("/img/icon_tke.png"));
         ImageIcon iconHoaDon = new ImageIcon(getClass().getResource("/img/icon_order.png"));
-        ImageIcon iconDangXuat = new ImageIcon(getClass().getResource("/img/icon_exit.png"));
+//        ImageIcon iconDangXuat = new ImageIcon(getClass().getResource("/img/icon_exit.png"));
         ImageIcon iconNhanVien = new ImageIcon(getClass().getResource("/img/icon_admin.png"));
         ImageIcon iconSupplier = new ImageIcon(getClass().getResource("/img/icon_supplier.png"));
         ImageIcon iconProduct = new ImageIcon(getClass().getResource("/img/icon_product.png"));
-
-        //Create submenu
-        MenuItem menuSanPham = new MenuItem(iconSubMenu, "Sản phẩm", new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                pnlBody.removeAll();
-                pnlBody.add(new GUI_KhachHang());
-                pnlBody.repaint();
-                pnlBody.revalidate();
-            }
-        });
-        MenuItem menuHoaDon = new MenuItem(iconSubMenu, "Hóa Đơn", new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                pnlBody.removeAll();
-                pnlBody.add(new GUI_HoaDon());
-                pnlBody.repaint();
-                pnlBody.revalidate();
-            }
-        });
-        MenuItem menuPB2 = new MenuItem(iconSubMenu, "Đơn Hàng", new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                pnlBody.removeAll();
-                pnlBody.add(new GUI_DonHang());
-                pnlBody.repaint();
-                pnlBody.revalidate();
-            }
-        });
-
+        ImageIcon iconCustomer = new ImageIcon(getClass().getResource("/img/icon_customer.png"));
+        ImageIcon icondonDHang = new ImageIcon(getClass().getResource("/img/icon_donDH.png"));
         
-        // Thống kê theo sản phẩm
-        //create menu
-        MenuItem menuHome = new MenuItem(iconHome, "Home",new ActionListener() {
+                                //create menu
+        // menu item sản phẩm
+        Menu menuQLySP  = new Menu(iconSubMenu, "Quản Lý Sản phẩm", new ActionListener() { 
             @Override
             public void actionPerformed(ActionEvent e) {
                 pnlBody.removeAll();
-                pnlBody.add(new GUI_Home());
+                pnlBody.add(new GUI_QuanLySP());
                 pnlBody.repaint();
                 pnlBody.revalidate();
             }
         });
-        MenuItem menuSP = new MenuItem(iconProduct, "Sản Phẩm", null, menuHoaDon, menuPB2);
-        MenuItem menuTKe = new MenuItem(iconThongKe, "Thống Kê", new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                pnlBody.removeAll();
-                pnlBody.add(new GUI_ThongKe());
-                pnlBody.repaint();
-                pnlBody.revalidate();
-            }
-        });
-        MenuItem menuDangXuat = new MenuItem(iconDangXuat, "Đăng xuất", null);
-        MenuItem menuNhanVien = new MenuItem(iconNhanVien, "Nhân Viên", null);
-        MenuItem menuNCC = new MenuItem(iconSupplier, "Nhà Cung Cấp", null);
-        MenuItem menuProduct = new MenuItem(iconHoaDon, "Hóa Đơn", null);
         
-//        MenuItem menuCongTrinh = new MenuItem(null, "Công trình", null, menuCT1, menuCT2);
-        MenuItem menuAdmin = new MenuItem(null, "Admin", null);
-        addMenu( menuHome, menuSP,menuProduct, menuNhanVien, menuNCC, menuTKe, menuAdmin, menuDangXuat);
+        //menu item Tìm Kiếm Sản Phẩm
+        Menu menuTimKiemSP = new Menu(iconSubMenu, "Tìm Kiếm Sản phẩm", new ActionListener() { 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_TimKiemSP());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        
+        //menu item Thống kê Sản Phẩm
+        Menu menuThongKeSP = new Menu(iconSubMenu, "Thống Kê Sản phẩm", new ActionListener() { 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_ThongKeSP());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        // menu Item Quản Lý Khách Hàng
+        Menu menuQuanLyKH = new Menu(iconSubMenu, "Quản Lý KH", new ActionListener() { 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_QuanLyKhachHang());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+         // menu Item Tìm Kiếm Khách Hàng
+        Menu menuTimKiemKH = new Menu(iconSubMenu, "Tìm Kiếm KH", new ActionListener() { 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_QuanLyKhachHang());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        // menu thống kê Khách Hàng
+        Menu menuThongKeKH = new Menu(iconSubMenu, "Thống Kê KH", new ActionListener() { 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_ThongKeKH());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
 
+        // menu Nhà Cung Cấp
+        Menu menuNCC = new Menu(iconSupplier, "Nhà Cung Cấp", new ActionListener() { 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_NhaCungCap());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        //menuItem Lập Hóa Đơn
+        Menu menuLapHD = new Menu(iconSubMenu, "Lập Hóa Đơn", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_LapHoaDon());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        //menuItem Tìm Kiếm Hóa Đơn
+        Menu menuTimKiemHD = new Menu(iconSubMenu, "Tìm Kiếm Hóa Đơn", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_TimKiemHD());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        //menuItem Thống Kê Hóa Đơn
+        Menu menuThongKeHD = new Menu(iconSubMenu, "Thống Kê Hóa Đơn", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_ThongKeHoaDon());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        // menu Đơn Đặt Hàng
+        Menu menuDonDatHang = new Menu(icondonDHang, "Đơn Đặt Hàng", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_DonDatHang());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        // menu Nhân Viên
+        Menu menuNhanVien = new Menu(iconNhanVien, "Nhân Viên", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new NhanVien_GUI());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        // menu Tài khoản
+        Menu menuTaiKhoan = new Menu(iconAccount, "Tài Khoản", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pnlBody.removeAll();
+                pnlBody.add(new GUI_TaiKhoan());
+                pnlBody.repaint();
+                pnlBody.revalidate();
+            }
+        });
+        
+        Menu menuSanPham = new Menu(iconProduct, "Sản Phẩm", null, menuQLySP, menuTimKiemSP, menuThongKeSP);
+        Menu menuKhachHang = new Menu(iconCustomer, "Khách Hàng", null, menuQuanLyKH, menuTimKiemKH , menuThongKeKH);
+        Menu menuHoaDon = new Menu(iconHoaDon, "Hóa Đơn", null, menuLapHD,menuTimKiemHD,  menuThongKeHD);
+//        MenuItem menuPhongBan = new MenuItem(iconPB, "Quản lý công nhân", null, menuPB1, menuPB2, menuPB3);
+//        MenuItem menuCongTrinh = new MenuItem(iconHome, "Công trình", null, menuCT1);
+//        MenuItem menuAdmin = new MenuItem(iconAdmin, "Admin", null, menuadmin1);
+        
+        addMenu(menuSanPham, menuKhachHang, menuNCC, menuHoaDon, menuDonDatHang, menuNhanVien, menuTaiKhoan);
+   
     }
 
-    private void addMenu(MenuItem... menu) {
+    private void addMenu(Menu... menu) {
         for (int i = 0; i < menu.length; i++) {
             menus.add(menu[i]);
-            ArrayList<MenuItem> subMenu = menu[i].getSubMenu();
-            for (MenuItem m : subMenu) {
+            ArrayList<Menu> subMenu = menu[i].getSubMenu();
+            for (Menu m : subMenu) {
                 addMenu(m);
             }
         }
         menus.revalidate();
     }
    
-   
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
-     */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnlMenu = new RoundedPanel(50, new Color(0, 204,204));
+        pnlMenu = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         menus = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         LOGO = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         pnlBody = new javax.swing.JPanel();
         bgHome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FlashWork_Phần mềm chấm công");
+        setTitle("Fashion_Phần Mềm Quản Lý Bán Hàng Quần Áo Thời Trang");
         setBackground(new java.awt.Color(0, 204, 51));
 
-        pnlMenu.setBackground(new java.awt.Color(204, 153, 0));
+        pnlMenu.setBackground(new java.awt.Color(102, 102, 102));
         pnlMenu.setLayout(new java.awt.BorderLayout());
 
+        jScrollPane1.setBackground(new java.awt.Color(102, 102, 102));
         jScrollPane1.setBorder(null);
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setToolTipText("");
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         jScrollPane1.setHorizontalScrollBar(null);
 
-        menus.setBackground(new java.awt.Color(153, 51, 255));
+        menus.setBackground(new java.awt.Color(102, 102, 102));
         menus.setLayout(new javax.swing.BoxLayout(menus, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(menus);
 
         pnlMenu.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        jPanel5.setBackground(new java.awt.Color(153, 51, 255));
+        jPanel5.setBackground(new java.awt.Color(102, 102, 102));
 
         LOGO.setBackground(new java.awt.Color(0, 204, 153));
         LOGO.setFont(new java.awt.Font("Segoe UI Symbol", 1, 30)); // NOI18N
@@ -228,11 +308,15 @@ public class GUI_HomeMain extends javax.swing.JFrame {
 
         pnlMenu.add(jPanel5, java.awt.BorderLayout.PAGE_START);
 
-        pnlBody.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+        pnlMenu.add(jPanel1, java.awt.BorderLayout.PAGE_END);
+
+        pnlBody.setBackground(new java.awt.Color(102, 102, 102));
         pnlBody.setLayout(new java.awt.BorderLayout());
 
         bgHome.setBackground(new java.awt.Color(255, 102, 102));
-        bgHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg_homeNew.png"))); // NOI18N
+        bgHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bgHome_new.png"))); // NOI18N
         pnlBody.add(bgHome, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -242,15 +326,18 @@ public class GUI_HomeMain extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlBody, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlBody, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(pnlBody, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pnlBody, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 940, Short.MAX_VALUE)
+                    .addComponent(pnlMenu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        setSize(new java.awt.Dimension(1182, 857));
+        setSize(new java.awt.Dimension(1493, 857));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     
@@ -259,6 +346,7 @@ public class GUI_HomeMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LOGO;
     private javax.swing.JLabel bgHome;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel menus;
