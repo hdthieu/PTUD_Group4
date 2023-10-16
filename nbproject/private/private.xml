@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -10,8 +9,6 @@
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_QuanLyHD.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_DonDatHang.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_ThongKeHoaDon.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_DonHang.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_Admin.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/Login.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/Controller/chuyenMHController.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/DAO/TaiKhoan_DAO.java</file>
@@ -29,43 +26,10 @@
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/menu/menuPrimary.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_QuanLySP.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_QuanLyKhachHang.java</file>
+            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/DAO/NhanVien_DAO.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/Entity/TaiKhoan.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_HoaDon.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/banhangthoitrang/BanHangThoiTrang.java</file>
             <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_TimKiemSP.java</file>
         </group>
     </open-files>
 </project-private>
-=======
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Year3/PhatTrienUngDung/MyProject/src/GUI/NhanVien_GUI.java</file>
-            <file>file:/D:/Year3/PhatTrienUngDung/MyProject/src/GUI/GUI_Admin.java</file>
-            <file>file:/D:/Year3/PhatTrienUngDung/MyProject/src/GUI/Login.java</file>
-        </group>
-    </open-files>
-</project-private>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_Home.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_PhanQuyen.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/Login.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_HoaDon.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_HomeMain.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/Connection/connectDatabase.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/MenuItem.java</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/img/icon_add.png</file>
-            <file>file:/D:/Group4_PTUD/BanHangThoiTrang/src/GUI/GUI_ThongKe.java</file>
-        </group>
-    </open-files>
-</project-private>
->>>>>>> d0c18684eef5d0099322ea95acee2afb7dc6cb9a
->>>>>>> 5ff51295912a7f09cae7cbdd1974d8690069211b

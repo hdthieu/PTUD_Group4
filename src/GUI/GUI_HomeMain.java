@@ -1,8 +1,8 @@
 
 package GUI;
 
-import GUI.GUI_DonHang;
-import GUI.Menu;
+//import GUI.GUI_DonHang;
+import menu.Menu;
 import GUI.GUI_PhieuThongKe;
 import GUI.GUI_QuanLySP;
 import GUI.GUI_ThongKeSP;
@@ -132,7 +132,7 @@ public class GUI_HomeMain extends javax.swing.JFrame {
             }
         });
         // menu Item Quản Lý Khách Hàng
-        Menu menuQuanLyKH = new Menu(iconSubMenu, "Quản Lý Khách Hàng", new ActionListener() { 
+        Menu menuQuanLyKH = new Menu(iconSubMenu, "Quản Lý KH", new ActionListener() { 
             @Override
             public void actionPerformed(ActionEvent e) {
                 pnlBody.removeAll();
@@ -142,7 +142,7 @@ public class GUI_HomeMain extends javax.swing.JFrame {
             }
         });
          // menu Item Tìm Kiếm Khách Hàng
-        Menu menuTimKiemKH = new Menu(iconSubMenu, "Tìm Kiếm Khách Hàng", new ActionListener() { 
+        Menu menuTimKiemKH = new Menu(iconSubMenu, "Tìm Kiếm KH", new ActionListener() { 
             @Override
             public void actionPerformed(ActionEvent e) {
                 pnlBody.removeAll();
@@ -152,7 +152,7 @@ public class GUI_HomeMain extends javax.swing.JFrame {
             }
         });
         // menu thống kê Khách Hàng
-        Menu menuThongKeKH = new Menu(iconSubMenu, "Thống Kê Khách Hàng", new ActionListener() { 
+        Menu menuThongKeKH = new Menu(iconSubMenu, "Thống Kê KH", new ActionListener() { 
             @Override
             public void actionPerformed(ActionEvent e) {
                 pnlBody.removeAll();
@@ -269,7 +269,7 @@ public class GUI_HomeMain extends javax.swing.JFrame {
         bgHome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FlashWork_Phần mềm chấm công");
+        setTitle("Fashion_Phần Mềm Quản Lý Bán Hàng Quần Áo Thời Trang");
         setBackground(new java.awt.Color(0, 204, 51));
 
         pnlMenu.setBackground(new java.awt.Color(102, 102, 102));
@@ -333,7 +333,7 @@ public class GUI_HomeMain extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlBody, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 940, Short.MAX_VALUE)
+                    .addComponent(pnlBody, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 940, Short.MAX_VALUE)
                     .addComponent(pnlMenu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 

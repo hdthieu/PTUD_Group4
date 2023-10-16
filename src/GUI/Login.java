@@ -42,7 +42,7 @@ public class Login extends javax.swing.JFrame {
      
     public Login() {
         initComponents();
-//        scaleImage();
+        
        
     }
      public void scaleImage() {
@@ -132,7 +132,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        ConnectSQL cn = new connectDatabase();
+        connectDatabase cn = new connectDatabase();
         try {
             Connection conn = cn.getConnection();
             ResultSet rs;
