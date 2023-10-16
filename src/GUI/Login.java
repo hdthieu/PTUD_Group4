@@ -28,7 +28,8 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.UnsupportedLookAndFeelException;
-
+import Connection.ConnectSQL;
+//import Connection.connectDatabase;
 
 /**
  *
@@ -42,7 +43,7 @@ public class Login extends javax.swing.JFrame {
      
     public Login() {
         initComponents();
-        
+//        scaleImage();
        
     }
      public void scaleImage() {

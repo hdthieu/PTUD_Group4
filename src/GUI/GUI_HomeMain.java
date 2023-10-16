@@ -72,7 +72,6 @@ public class GUI_HomeMain extends javax.swing.JFrame {
     initComponents();
     setLocationRelativeTo(null);
     this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-    
     execute();
   
 }
