@@ -9,5 +9,5 @@ package Entity;
  * @author dinhh
  */
 public class NhaCungCap {
-    
+    private String maNhaCungCap;
 }
